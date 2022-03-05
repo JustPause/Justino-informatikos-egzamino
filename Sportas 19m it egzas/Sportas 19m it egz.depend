@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1646138757 source:/home/justpause/Programming/C++/Sportas 19m it egz/main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<bits/stdc++.h>
+
