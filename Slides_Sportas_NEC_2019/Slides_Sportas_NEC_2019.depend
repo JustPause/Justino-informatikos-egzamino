@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1646141478 source:/home/justpause/Programming/C++/Slides_Sportas_NEC_2019/main.cpp
+	<iostream>
+	<fstream>
+
