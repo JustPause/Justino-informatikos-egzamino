@@ -19,7 +19,7 @@ int main()
     int n; //eluciu skaicius
 
 //GitTest
-
+//Test2
     file_in >> n;
 cout<<n;
     for (int i =0; i<n; i++)
