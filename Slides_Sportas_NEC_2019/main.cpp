@@ -18,6 +18,8 @@ int main()
     ifstream file_in("U1.txt");
     int n; //eluciu skaicius
 
+//GitTest
+
     file_in >> n;
 cout<<n;
     for (int i =0; i<n; i++)
