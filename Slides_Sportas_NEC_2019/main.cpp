@@ -20,6 +20,7 @@ int main()
 
 //GitTest
 //Test2
+
     file_in >> n;
 cout<<n;
     for (int i =0; i<n; i++)
