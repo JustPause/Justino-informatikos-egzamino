@@ -27,8 +27,6 @@ cout<<n;
         file_in.get (z.vp,ilgis);
         file_in>>z.vp[i];
         cout <<z.vp[i];
-
-
     }
     return 0;
 }
