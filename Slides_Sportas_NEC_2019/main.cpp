@@ -4,31 +4,36 @@
 using namespace std;
 
 const int ilgis=20;
+int i=0;
 
 struct Startas
 {
-//char v[i1],p[i1];
-    char vp[ilgis];
+    char v[ilgis]=" ",p[ilgis]=" ";
 };
 
 int main()
 {
+    Startas pirmas;
 
-    Startas z;
+    int p1;
+    char A[30]=" ";
+
     ifstream file_in("U1.txt");
-    int n; //eluciu skaicius
 
-//GitTest
-//Test2
+    file_in >> p1;
 
-    file_in >> n;
-cout<<n;
-    for (int i =0; i<n; i++)
-    {
-        file_in.get (z.vp,ilgis);
-        file_in>>z.vp[i];
-        cout <<z.vp[i];
+    file_in.getline(pirmas.v, 20);
+
+
+
+    for(int i=0; i<ilgis; i++) {
+        cout << pirmas.v[i];
     }
+    cout << ":"<<endl;
+    cout << p1;
+
+    ofstream file_out("U1rez.txt");
+
     return 0;
 }
 
