@@ -17,6 +17,12 @@ struct Startas
 
     int finish_h, finish_m, finish_s;
     int pirmas_i, antras_i, pirmas_p, antras_p;
+
+    int taskai;
+
+    int laikas_f, laikas_s;
+
+    int baudos_laikas;
 };
 
 int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas, Startas &penktas, Startas &sestas, Startas &Nezinomasis, int &p1, int &p2)
@@ -141,13 +147,26 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
         } else (cout<<Nezinomasis.finish_skaic<<" ");
     }
 
-/*
-file_in>>antas.finish_skaic>>antas.finish_h>>antas.finish_m>>antas.finish_s>>antas.pirmas_i>>antas.pirmas_p>>antas.antras_i>>antas.antras_p;
-file_in>>trecias.finish_skaic>>trecias.finish_h>>trecias.finish_m>>trecias.finish_s>>trecias.pirmas_i>>trecias.pirmas_p>>trecias.antras_i>>trecias.antras_p;
-file_in>>ketivirtas.finish_skaic>>ketivirtas.finish_h>>ketivirtas.finish_m>>ketivirtas.finish_s>>ketivirtas.pirmas_i>>ketivirtas.pirmas_p>>ketivirtas.antras_i>>ketivirtas.antras_p;
-file_in>>penktas.finish_skaic>>penktas.finish_h>>penktas.finish_m>>penktas.finish_s>>penktas.pirmas_i>>penktas.pirmas_p>>penktas.antras_i>>penktas.antras_p;
-*/
-return 0;
+    /*
+    file_in>>antas.finish_skaic>>antas.finish_h>>antas.finish_m>>antas.finish_s>>antas.pirmas_i>>antas.pirmas_p>>antas.antras_i>>antas.antras_p;
+    file_in>>trecias.finish_skaic>>trecias.finish_h>>trecias.finish_m>>trecias.finish_s>>trecias.pirmas_i>>trecias.pirmas_p>>trecias.antras_i>>trecias.antras_p;
+    file_in>>ketivirtas.finish_skaic>>ketivirtas.finish_h>>ketivirtas.finish_m>>ketivirtas.finish_s>>ketivirtas.pirmas_i>>ketivirtas.pirmas_p>>ketivirtas.antras_i>>ketivirtas.antras_p;
+    file_in>>penktas.finish_skaic>>penktas.finish_h>>penktas.finish_m>>penktas.finish_s>>penktas.pirmas_i>>penktas.pirmas_p>>penktas.antras_i>>penktas.antras_p;
+    */
+    return 0;
+}
+
+int BigNumberCrunch(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, Startas penktas, Startas sestas, int p1, int p2)
+{
+
+    pirmas.laikas_f = ((pirmas.finish_h * 60) + pirmas.finish_m * 60) + pirmas.finish_s;
+
+    pirmas.laikas_s = ((pirmas.start_h * 60) + pirmas.start_m * 60) + pirmas.start_s;
+
+    pirmas.baudos_laikas = (pirmas.pirmas_p - pirmas.pirmas_i) + (pirmas.antras_p - pirmas.antras_i);
+
+    pirmas.taskai = (pirmas.laikas_f - pirmas.laikas_s) + (pirmas.baudos_laikas * 60);
+
 }
 
 int main()
@@ -157,6 +176,8 @@ int main()
     int p1, p2;
 
     in1_Work(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, Nezinomasis, p1, p2);
+
+    BigNumberCrunch(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, p1, p2);
 
     //Bug Hunt
     cout << S_pirmas.v;
