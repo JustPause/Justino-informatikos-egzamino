@@ -56,6 +56,7 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
     file_in>>sestas.start_skaic>>sestas.start_h>>sestas.start_m>>sestas.start_s;
 
     file_in>>p2;
+
     for(int i=0; i<6; i++) {
         file_in>> Nezinomasis.finish_skaic;
         if( Nezinomasis.finish_skaic>=200) {
