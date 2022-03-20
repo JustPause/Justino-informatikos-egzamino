@@ -303,7 +303,9 @@ int Sorting(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, 
 
     }
 }
-int line_out(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, Startas penktas, Startas sestas, int p1, int p2) {}
+int line_out(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, Startas penktas, Startas sestas, int p1, int p2) {
+
+}
 
 int main()
 {
