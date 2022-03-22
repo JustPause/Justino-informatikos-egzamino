@@ -337,7 +337,7 @@ int Sorting(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, 
     {
         for( int i=1; i>sestas.taskai+1; i++)
         {
-//Parasyti kuriojia vietoja turi
+//Parasyti kuriojia vietoja turi a
         }
 
         cout << pirmas.taskai << endl;
