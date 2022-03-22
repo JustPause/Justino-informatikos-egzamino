@@ -26,7 +26,7 @@ struct Startas
     int vieta = 0;
 };
 
-int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas, Startas &penktas, Startas &sestas, Startas &Nezinomasis, int &p1, int &p2)
+int In1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas, Startas &penktas, Startas &sestas, Startas &Nezinomasis, int &p1, int &p2)
 {
     ifstream file_in("U1.txt");
 
@@ -58,15 +58,20 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
 
     file_in >> p2;
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 6; i++)
+    {
         file_in >> Nezinomasis.finish_skaic;
-        if (Nezinomasis.finish_skaic >= 200) {
+        if (Nezinomasis.finish_skaic >= 200)
+        {
             file_in >> Nezinomasis.finish_h >> Nezinomasis.finish_m >> Nezinomasis.finish_s >> Nezinomasis.pirmas_i >> Nezinomasis.pirmas_p >> Nezinomasis.antras_i >> Nezinomasis.antras_p;
-        } else {
+        }
+        else
+        {
             file_in >> Nezinomasis.finish_h >> Nezinomasis.finish_m >> Nezinomasis.finish_s >> Nezinomasis.pirmas_i >> Nezinomasis.pirmas_p;
         }
 
-        if (pirmas.start_skaic == Nezinomasis.finish_skaic) {
+        if (pirmas.start_skaic == Nezinomasis.finish_skaic)
+        {
 
             pirmas.finish_skaic = Nezinomasis.finish_skaic;
             pirmas.finish_h = Nezinomasis.finish_h;
@@ -74,13 +79,15 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
             pirmas.finish_s = Nezinomasis.finish_s;
             pirmas.pirmas_i = Nezinomasis.pirmas_i;
             pirmas.pirmas_p = Nezinomasis.pirmas_p;
-            if (Nezinomasis.finish_skaic >= 200) {
+            if (Nezinomasis.finish_skaic >= 200)
+            {
                 pirmas.antras_i = Nezinomasis.antras_i;
                 pirmas.antras_p = Nezinomasis.antras_p;
             }
         }
 
-        else if (antas.start_skaic == Nezinomasis.finish_skaic) {
+        else if (antas.start_skaic == Nezinomasis.finish_skaic)
+        {
 
             antas.finish_skaic = Nezinomasis.finish_skaic;
             antas.finish_h = Nezinomasis.finish_h;
@@ -88,13 +95,15 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
             antas.finish_s = Nezinomasis.finish_s;
             antas.pirmas_i = Nezinomasis.pirmas_i;
             antas.pirmas_p = Nezinomasis.pirmas_p;
-            if (Nezinomasis.finish_skaic >= 200) {
+            if (Nezinomasis.finish_skaic >= 200)
+            {
                 antas.antras_i = Nezinomasis.antras_i;
                 antas.antras_p = Nezinomasis.antras_p;
             }
         }
 
-        else if (trecias.start_skaic == Nezinomasis.finish_skaic) {
+        else if (trecias.start_skaic == Nezinomasis.finish_skaic)
+        {
 
             trecias.finish_skaic = Nezinomasis.finish_skaic;
             trecias.finish_h = Nezinomasis.finish_h;
@@ -102,13 +111,15 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
             trecias.finish_s = Nezinomasis.finish_s;
             trecias.pirmas_i = Nezinomasis.pirmas_i;
             trecias.pirmas_p = Nezinomasis.pirmas_p;
-            if (Nezinomasis.finish_skaic >= 200) {
+            if (Nezinomasis.finish_skaic >= 200)
+            {
                 trecias.antras_i = Nezinomasis.antras_i;
                 trecias.antras_p = Nezinomasis.antras_p;
             }
         }
 
-        else if (ketivirtas.start_skaic == Nezinomasis.finish_skaic) {
+        else if (ketivirtas.start_skaic == Nezinomasis.finish_skaic)
+        {
 
             ketivirtas.finish_skaic = Nezinomasis.finish_skaic;
             ketivirtas.finish_h = Nezinomasis.finish_h;
@@ -116,13 +127,15 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
             ketivirtas.finish_s = Nezinomasis.finish_s;
             ketivirtas.pirmas_i = Nezinomasis.pirmas_i;
             ketivirtas.pirmas_p = Nezinomasis.pirmas_p;
-            if (Nezinomasis.finish_skaic >= 200) {
+            if (Nezinomasis.finish_skaic >= 200)
+            {
                 ketivirtas.antras_i = Nezinomasis.antras_i;
                 ketivirtas.antras_p = Nezinomasis.antras_p;
             }
         }
 
-        else if (penktas.start_skaic == Nezinomasis.finish_skaic) {
+        else if (penktas.start_skaic == Nezinomasis.finish_skaic)
+        {
 
             penktas.finish_skaic = Nezinomasis.finish_skaic;
             penktas.finish_h = Nezinomasis.finish_h;
@@ -130,11 +143,14 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
             penktas.finish_s = Nezinomasis.finish_s;
             penktas.pirmas_i = Nezinomasis.pirmas_i;
             penktas.pirmas_p = Nezinomasis.pirmas_p;
-            if (Nezinomasis.finish_skaic >= 200) {
+            if (Nezinomasis.finish_skaic >= 200)
+            {
                 penktas.antras_i = Nezinomasis.antras_i;
                 penktas.antras_p = Nezinomasis.antras_p;
             }
-        } else if (sestas.start_skaic == Nezinomasis.finish_skaic) {
+        }
+        else if (sestas.start_skaic == Nezinomasis.finish_skaic)
+        {
 
             sestas.finish_skaic = Nezinomasis.finish_skaic;
             sestas.finish_h = Nezinomasis.finish_h;
@@ -142,19 +158,21 @@ int in1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivir
             sestas.finish_s = Nezinomasis.finish_s;
             sestas.pirmas_i = Nezinomasis.pirmas_i;
             sestas.pirmas_p = Nezinomasis.pirmas_p;
-            if (Nezinomasis.finish_skaic >= 200) {
+            if (Nezinomasis.finish_skaic >= 200)
+            {
                 sestas.antras_i = Nezinomasis.antras_i;
                 sestas.antras_p = Nezinomasis.antras_p;
             }
-        } else
+        }
+        else
             (cout << Nezinomasis.finish_skaic << " ");
     }
 
     /*
-    file_in>>antas.finish_skaic>>antas.finish_h>>antas.finish_m>>antas.finish_s>>antas.pirmas_i>>antas.pirmas_p>>antas.antras_i>>antas.antras_p;
-    file_in>>trecias.finish_skaic>>trecias.finish_h>>trecias.finish_m>>trecias.finish_s>>trecias.pirmas_i>>trecias.pirmas_p>>trecias.antras_i>>trecias.antras_p;
-    file_in>>ketivirtas.finish_skaic>>ketivirtas.finish_h>>ketivirtas.finish_m>>ketivirtas.finish_s>>ketivirtas.pirmas_i>>ketivirtas.pirmas_p>>ketivirtas.antras_i>>ketivirtas.antras_p;
-    file_in>>penktas.finish_skaic>>penktas.finish_h>>penktas.finish_m>>penktas.finish_s>>penktas.pirmas_i>>penktas.pirmas_p>>penktas.antras_i>>penktas.antras_p;
+        file_in>>antas.finish_skaic>>antas.finish_h>>antas.finish_m>>antas.finish_s>>antas.pirmas_i>>antas.pirmas_p>>antas.antras_i>>antas.antras_p;
+        file_in>>trecias.finish_skaic>>trecias.finish_h>>trecias.finish_m>>trecias.finish_s>>trecias.pirmas_i>>trecias.pirmas_p>>trecias.antras_i>>trecias.antras_p;
+        file_in>>ketivirtas.finish_skaic>>ketivirtas.finish_h>>ketivirtas.finish_m>>ketivirtas.finish_s>>ketivirtas.pirmas_i>>ketivirtas.pirmas_p>>ketivirtas.antras_i>>ketivirtas.antras_p;
+        file_in>>penktas.finish_skaic>>penktas.finish_h>>penktas.finish_m>>penktas.finish_s>>penktas.pirmas_i>>penktas.pirmas_p>>penktas.antras_i>>penktas.antras_p;
     */
     return 0;
 }
@@ -166,9 +184,12 @@ int Poits(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas
 
     pirmas.laikas_s = (((pirmas.start_h * 60) + pirmas.start_m) * 60) + pirmas.start_s;
 
-    if (pirmas.finish_skaic >= 200) {
+    if (pirmas.finish_skaic >= 200)
+    {
         pirmas.baudos_laikas = (pirmas.pirmas_i - pirmas.pirmas_p) + (pirmas.antras_i - pirmas.antras_p);
-    } else {
+    }
+    else
+    {
         pirmas.baudos_laikas = (pirmas.pirmas_i - pirmas.pirmas_p);
     }
 
@@ -178,9 +199,12 @@ int Poits(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas
 
     antas.laikas_s = (((antas.start_h * 60) + antas.start_m) * 60) + antas.start_s;
 
-    if (antas.finish_skaic >= 200) {
+    if (antas.finish_skaic >= 200)
+    {
         antas.baudos_laikas = (antas.pirmas_i - antas.pirmas_p) + (antas.antras_i - antas.antras_p);
-    } else {
+    }
+    else
+    {
         antas.baudos_laikas = (antas.pirmas_i - antas.pirmas_p);
     }
 
@@ -190,9 +214,12 @@ int Poits(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas
 
     trecias.laikas_s = (((trecias.start_h * 60) + trecias.start_m) * 60) + trecias.start_s;
 
-    if (trecias.finish_skaic >= 200) {
+    if (trecias.finish_skaic >= 200)
+    {
         trecias.baudos_laikas = (trecias.pirmas_i - trecias.pirmas_p) + (trecias.antras_i - trecias.antras_p);
-    } else {
+    }
+    else
+    {
         trecias.baudos_laikas = (trecias.pirmas_i - trecias.pirmas_p);
     }
 
@@ -202,9 +229,12 @@ int Poits(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas
 
     ketivirtas.laikas_s = (((ketivirtas.start_h * 60) + ketivirtas.start_m) * 60) + ketivirtas.start_s;
 
-    if (ketivirtas.finish_skaic >= 200) {
+    if (ketivirtas.finish_skaic >= 200)
+    {
         ketivirtas.baudos_laikas = (ketivirtas.pirmas_i - ketivirtas.pirmas_p) + (ketivirtas.antras_i - ketivirtas.antras_p);
-    } else {
+    }
+    else
+    {
         ketivirtas.baudos_laikas = (ketivirtas.pirmas_i - ketivirtas.pirmas_p);
     }
 
@@ -214,9 +244,12 @@ int Poits(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas
 
     penktas.laikas_s = (((penktas.start_h * 60) + penktas.start_m) * 60) + penktas.start_s;
 
-    if (penktas.finish_skaic >= 200) {
+    if (penktas.finish_skaic >= 200)
+    {
         penktas.baudos_laikas = (penktas.pirmas_i - penktas.pirmas_p) + (penktas.antras_i - penktas.antras_p);
-    } else {
+    }
+    else
+    {
         penktas.baudos_laikas = (penktas.pirmas_i - penktas.pirmas_p);
     }
 
@@ -226,30 +259,39 @@ int Poits(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas
 
     sestas.laikas_s = (((sestas.start_h * 60) + sestas.start_m) * 60) + sestas.start_s;
 
-    if (sestas.finish_skaic >= 200) {
+    if (sestas.finish_skaic >= 200)
+    {
         sestas.baudos_laikas = (sestas.pirmas_i - sestas.pirmas_p) + (sestas.antras_i - sestas.antras_p);
-    } else {
+    }
+    else
+    {
         sestas.baudos_laikas = (sestas.pirmas_i - sestas.pirmas_p);
     }
 
     sestas.taskai = (sestas.laikas_f - sestas.laikas_s) + (sestas.baudos_laikas * 60);
 
-    if(pirmas.taskai < 0) {
+    if(pirmas.taskai < 0)
+    {
         pirmas.taskai=0;
     }
-    if(antas.taskai < 0) {
+    if(antas.taskai < 0)
+    {
         antas.taskai=0;
     }
-    if(trecias.taskai < 0) {
+    if(trecias.taskai < 0)
+    {
         trecias.taskai=0;
     }
-    if(ketivirtas.taskai < 0) {
+    if(ketivirtas.taskai < 0)
+    {
         ketivirtas.taskai=0;
     }
-    if(penktas.taskai < 0) {
+    if(penktas.taskai < 0)
+    {
         penktas.taskai=0;
     }
-    if(sestas.taskai < 0) {
+    if(sestas.taskai < 0)
+    {
         sestas.taskai=0;
     }
 }
@@ -257,41 +299,45 @@ int Poits(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas
 int Sorting(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, Startas penktas, Startas sestas, int p1, int p2)
 {
     int temp=0;
-    if (pirmas.taskai>antas.taskai) {
+    if (pirmas.taskai>antas.taskai)
+    {
         temp = pirmas.taskai;
         pirmas.taskai=antas.taskai;
         antas.taskai=temp;
     }
 
-    if (antas.taskai>trecias.taskai) {
+    if (antas.taskai>trecias.taskai)
+    {
         temp = antas.taskai;
         antas.taskai=trecias.taskai;
         trecias.taskai=temp;
     }
 
-    if (trecias.taskai>ketivirtas.taskai) {
+    if (trecias.taskai>ketivirtas.taskai)
+    {
         temp = trecias.taskai;
         trecias.taskai=ketivirtas.taskai;
         ketivirtas.taskai=temp;
     }
 
-    if (ketivirtas.taskai>penktas.taskai) {
+    if (ketivirtas.taskai>penktas.taskai)
+    {
         temp = ketivirtas.taskai;
         ketivirtas.taskai=penktas.taskai;
         penktas.taskai=temp;
     }
 
-    if (penktas.taskai>sestas.taskai) {
+    if (penktas.taskai>sestas.taskai)
+    {
         temp = penktas.taskai;
         penktas.taskai=sestas.taskai;
         sestas.taskai=temp;
     }
 
     {
-        for( int i=1; i>sestas.taskai+1; i++) {
-            if(i==pirmas.taskai) {
-                cout<<"coll";
-            }
+        for( int i=1; i>sestas.taskai+1; i++)
+        {
+//Parasyti kuriojia vietoja turi
         }
 
         cout << pirmas.taskai << endl;
@@ -300,10 +346,43 @@ int Sorting(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, 
         cout << ketivirtas.taskai << endl;
         cout << penktas.taskai << endl;
         cout << sestas.taskai << endl;
+        cout << endl;
 
     }
 }
-int line_out(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, Startas penktas, Startas sestas, int p1, int p2) {
+int Line_out_M(Startas pirmas, Startas antas, Startas trecias, Startas ketivirtas, Startas penktas, Startas sestas, int p1, int p2)
+{
+    cout <<"Merginos"<<endl;
+
+    if (pirmas.finish_skaic <= 200 && pirmas.finish_skaic!=0)
+    {
+        cout << pirmas.finish_skaic<<" "<<pirmas.v<<endl;
+    }
+
+    if (antas.finish_skaic <= 200 && antas.finish_skaic!=0)
+    {
+        cout << antas.finish_skaic<<" M2 "<<endl;
+    }
+
+    if (trecias.finish_skaic <= 200 && trecias.finish_skaic!=0)
+    {
+        cout << trecias.finish_skaic<<" M3 "<<endl;
+    }
+
+    if (ketivirtas.finish_skaic <= 200 && ketivirtas.finish_skaic!=0)
+    {
+        cout << ketivirtas.finish_skaic<<" M4 "<<endl;
+    }
+
+    if (penktas.finish_skaic <= 200 && penktas.finish_skaic!=0)
+    {
+        cout << penktas.finish_skaic<<" M5 "<<endl;
+    }
+
+    if (sestas.finish_skaic <= 200 && sestas.finish_skaic!=0)
+    {
+        cout << sestas.finish_skaic<<" M6 "<<endl;
+    }
 
 }
 
@@ -313,12 +392,13 @@ int main()
 
     int p1, p2;
 
-    in1_Work(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, Nezinomasis, p1, p2);
+    In1_Work(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, Nezinomasis, p1, p2);
 
     Poits(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, p1, p2);
 
     Sorting(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, p1, p2);
     // Bug Hunt
+    Line_out_M(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, p1, p2);
 
     ofstream file_out("U1rez.txt");
 
