@@ -26,7 +26,7 @@ struct Startas
     int vieta = 0;
 };
 
-int In1_Work(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas, Startas &penktas, Startas &sestas, Startas &Nezinomasis, int &p1, int &p2)
+int Nuskaitimo_Fun(Startas &pirmas, Startas &antas, Startas &trecias, Startas &ketivirtas, Startas &penktas, Startas &sestas, Startas &Nezinomasis, int &p1, int &p2)
 {
     ifstream file_in("U1.txt");
 
@@ -392,7 +392,7 @@ int main()
 
     int p1, p2;
 
-    In1_Work(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, Nezinomasis, p1, p2);
+    Nuskaitimo_Fun(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, Nezinomasis, p1, p2);
 
     Poits(S_pirmas, S_antas, S_trecias, S_ketivirtas, S_penktas, S_sestas, p1, p2);
 
