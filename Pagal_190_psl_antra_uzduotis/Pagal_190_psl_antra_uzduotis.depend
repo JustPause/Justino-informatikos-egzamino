@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1648384913 source:c:\users\justinas\github\justino-informatikos-egzamino\pagal_190_psl_antra_uzduotis\main.cpp
+	<iostream>
+	<fstream>
+
