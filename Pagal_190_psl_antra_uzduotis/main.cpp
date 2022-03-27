@@ -28,11 +28,8 @@ struct Sportininkai
 
     int vieta = 0;
 };
-/*
 
-*/
-
-int Skaitimas_is_failo(Sportininkai Dalyviai[6])
+int Skaitimas_is_failo(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
 {
     int Pirmas_Skaicius,Antras_Skacius;
 
@@ -74,6 +71,12 @@ int Skaitimas_is_failo(Sportininkai Dalyviai[6])
     return 0;
 }
 
+int Isdestimas(Sportininkai Dalyviai[6])
+{
+
+    return 0;
+}
+
 int main()
 {
     int Pirmas_Skaicius;
@@ -84,7 +87,7 @@ int main()
 
     Sportininkai Dalyviai[Pirmas_Skaicius];
 
-    Skaitimas_is_failo(Dalyviai);
+    Skaitimas_is_failo(Pirmas_Skaicius, Dalyviai);
 
     cout<< Dalyviai[0].vardas;
 }
