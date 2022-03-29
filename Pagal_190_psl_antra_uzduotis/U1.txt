@@ -1,5 +1,5 @@
 6
-Petras A. Petraitis 213 15 20 00
+Petras A. Petraitis 213 15 20 0
 Jurgis Jurgutis     221 16 12 12
 Rima Joana          115 15 15 59
 Zigmas Nosis        256 16 23 9

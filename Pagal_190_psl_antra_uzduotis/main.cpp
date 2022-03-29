@@ -83,22 +83,15 @@ int Isdestimas(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6]
 {
     ofstream failas_o("U1rez.txt");
     failas_o <<Pirmas_Skaicius_Einantis_i_Dalyvius<<endl;
-    int ats = 0;
+    int ats = Pirmas_Skaicius_Einantis_i_Dalyvius;
+    for (int i=0; i<ats; i++)
+    {
+        failas_o <<Dalyviai[i].vardas<<" "<<Dalyviai[i].Starto_Numeris<<" "<<Dalyviai[i].start_h<<" "<<Dalyviai[i].start_m<<" "<<Dalyviai[i].start_s<<endl;
 
-    failas_o <<Dalyviai[ats].vardas<<" "<<Dalyviai[ats].Starto_Numeris<<" "<<Dalyviai[ats].start_h<<" "<<Dalyviai[ats].start_m<<" "<<Dalyviai[ats].start_s<<endl;
-    ats++;
-    failas_o <<Dalyviai[ats].vardas<<" "<<Dalyviai[ats].Starto_Numeris<<" "<<Dalyviai[ats].start_h<<" "<<Dalyviai[ats].start_m<<" "<<Dalyviai[ats].start_s<<endl;
-    ats++;
-    failas_o <<Dalyviai[ats].vardas<<" "<<Dalyviai[ats].Starto_Numeris<<" "<<Dalyviai[ats].start_h<<" "<<Dalyviai[ats].start_m<<" "<<Dalyviai[ats].start_s<<endl;
-    ats++;
-    failas_o <<Dalyviai[ats].vardas<<" "<<Dalyviai[ats].Starto_Numeris<<" "<<Dalyviai[ats].start_h<<" "<<Dalyviai[ats].start_m<<" "<<Dalyviai[ats].start_s<<endl;
-    ats++;
-    failas_o <<Dalyviai[ats].vardas<<" "<<Dalyviai[ats].Starto_Numeris<<" "<<Dalyviai[ats].start_h<<" "<<Dalyviai[ats].start_m<<" "<<Dalyviai[ats].start_s<<endl;
-    ats++;
-    failas_o <<Dalyviai[ats].vardas<<" "<<Dalyviai[ats].Starto_Numeris<<" "<<Dalyviai[ats].start_h<<" "<<Dalyviai[ats].start_m<<" "<<Dalyviai[ats].start_s<<endl;
-    ats=0;
+    }
 
-    failas_o <<Dalyviai[ats].m<<endl;
+
+    failas_o <<Dalyviai[0].m<<endl;
 
     for(int i=0; i<Dalyviai[0].m; i++)
     {
