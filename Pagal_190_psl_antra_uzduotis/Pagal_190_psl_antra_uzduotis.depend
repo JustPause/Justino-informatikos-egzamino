@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1648384913 source:c:\users\justinas\github\justino-informatikos-egzamino\pagal_190_psl_antra_uzduotis\main.cpp
+1648665797 source:c:\users\justinas\github\justino-informatikos-egzamino\pagal_190_psl_antra_uzduotis\main.cpp
 	<iostream>
 	<fstream>
+	<vector>
 
 1648557239 source:/home/justpause/Programming/C++/Justino-informatikos-egzamino/Pagal_190_psl_antra_uzduotis/main.cpp
 	<iostream>

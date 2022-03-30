@@ -22,7 +22,7 @@ struct Sportininkai
     int finish_h = 0, finish_m = 0, finish_s = 0;
     int pirmas_i = 0, antras_i = 0, pirmas_p = 0, antras_p = 0;
 
-    int taskai = 0;
+    int taskai = 0,taskai_laikas_h= 0,taskai_laikas_m= 0,taskai_laikas_s= 0;
 
     int laikas_f = 0, laikas_s = 0;
 
@@ -33,7 +33,7 @@ struct Sportininkai
     int n, m;
 };
 
-int Skaitimas_is_failo(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
+int Skaitimas_is_failo_Pirma_dalis(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
 {
     //int n, m;
 
@@ -43,8 +43,7 @@ int Skaitimas_is_failo(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dal
 
     //Sportininkai Dalyviai[n];
 
-    for(int i=0; i<Dalyviai[0].n; i++)
-    {
+    for(int i=0; i<Dalyviai[0].n; i++) {
 
         failas_i.ignore();
         failas_i.get(Dalyviai[i].vardas, Dalyviai[0].ilgis);
@@ -56,17 +55,14 @@ int Skaitimas_is_failo(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dal
 
     failas_i>>Dalyviai[0].m;
 
-    for(int i=0; i<Dalyviai[0].m; i++)
-    {
+    for(int i=0; i<Dalyviai[0].m; i++) {
         failas_i>>Dalyviai[i].Finisho_Numeris;
 
-        if(Dalyviai[i].Finisho_Numeris>=200)
-        {
+        if(Dalyviai[i].Finisho_Numeris>=200) {
             failas_i >> Dalyviai[i].finish_h >> Dalyviai[i].finish_m >> Dalyviai[i].finish_s >> Dalyviai[i].pirmas_i >> Dalyviai[i].antras_i >> Dalyviai[i].pirmas_p >> Dalyviai[i].antras_p;
         }
 
-        else
-        {
+        else {
             failas_i >> Dalyviai[i].finish_h >> Dalyviai[i].finish_m >> Dalyviai[i].finish_s >> Dalyviai[i].pirmas_i >> Dalyviai[i].pirmas_p;
         }
 
@@ -79,13 +75,23 @@ int Skaitimas_is_failo(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dal
     return 0;
 }
 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/*
+Problema ta, kad kai perskaito ifo is pa ji surisa su netuom numeriu
+O as nezinau kaip tai sutvarkyti
+
+*/
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 int Isdestimas(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
 {
-    ofstream failas_o("U1rez.txt");
+    ofstream failas_o("U1out.txt");
+
     failas_o <<Pirmas_Skaicius_Einantis_i_Dalyvius<<endl;
+
     int ats = Pirmas_Skaicius_Einantis_i_Dalyvius;
-    for (int i=0; i<ats; i++)
-    {
+
+    for (int i=0; i<ats; i++) {
         failas_o <<Dalyviai[i].vardas<<" "<<Dalyviai[i].Starto_Numeris<<" "<<Dalyviai[i].start_h<<" "<<Dalyviai[i].start_m<<" "<<Dalyviai[i].start_s<<endl;
 
     }
@@ -93,24 +99,64 @@ int Isdestimas(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6]
 
     failas_o <<Dalyviai[0].m<<endl;
 
-    for(int i=0; i<Dalyviai[0].m; i++)
-    {
+    for(int i=0; i<Dalyviai[0].m; i++) {
         failas_o<<Dalyviai[i].Finisho_Numeris<<" ";
 
-        if(Dalyviai[i].Finisho_Numeris>=200)
-        {
+        if(Dalyviai[i].Finisho_Numeris>=200) {
+            //vyr
             failas_o<< Dalyviai[i].finish_h <<" "<< Dalyviai[i].finish_m <<" "<< Dalyviai[i].finish_s <<" "<< Dalyviai[i].pirmas_i <<" "<< Dalyviai[i].antras_i <<" "<< Dalyviai[i].pirmas_p <<" "<< Dalyviai[i].antras_p<<endl;
         }
 
-        else
-        {
+        else {
+            //mot
             failas_o << Dalyviai[i].finish_h <<" "<< Dalyviai[i].finish_m <<" "<< Dalyviai[i].finish_s <<" "<< Dalyviai[i].pirmas_i <<" "<< Dalyviai[i].pirmas_p<<endl;
         }
     }
     return 0;
 }
 
+int i_taskus(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
+{
 
+    for(int i=0; i<Dalyviai[0].m; i++) {
+        if(Dalyviai[i].Finisho_Numeris>=200) {
+
+            Dalyviai[i].baudos_laikas = (Dalyviai[i].pirmas_p - Dalyviai[i].pirmas_i) + (Dalyviai[i].antras_p - Dalyviai[i].antras_i) ;
+
+        } else {
+
+            Dalyviai[i].baudos_laikas = (Dalyviai[i].pirmas_p - Dalyviai[i].pirmas_i) ;
+
+        }
+
+        Dalyviai[i].taskai=((((Dalyviai[i].finish_h-Dalyviai[i].start_h)*60)+(Dalyviai[i].finish_m-Dalyviai[i].start_m)*60)+(Dalyviai[i].finish_s-Dalyviai[i].start_s)*60)+(Dalyviai[i].baudos_laikas*60);
+
+        cout << Dalyviai[i].taskai<<" "<< (Dalyviai[i].finish_h-Dalyviai[i].start_h)<<" "<<(Dalyviai[i].finish_m-Dalyviai[i].start_m)<<" "<<(Dalyviai[i].finish_s-Dalyviai[i].start_s)<<endl;
+
+
+    }
+
+}
+
+int Is_fila(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
+{
+    ofstream failas_o("U1rez.txt");
+    cout<<"Merginos"<<endl;
+    //Padaryti for loop kurias leistu ismesti meginas cia
+    for(int i=0; i<Dalyviai[0].m; i++) {
+        if(Dalyviai[i].Finisho_Numeris<=200) {
+            cout<<Dalyviai[i].Starto_Numeris<<" "<<Dalyviai[i].vardas<<" "<<Dalyviai[i].vieta<<" "<<Dalyviai[i].taskai_laikas_h<<" "<<Dalyviai[i].taskai_laikas_m<<" "<<Dalyviai[i].taskai_laikas_s<<endl;
+
+        }
+    }
+    cout<<"Vaikinai"<<endl;
+    //Padaryti for loop kurias leistu ismesti vaikinus cia
+    for(int i=0; i<Dalyviai[0].m; i++) {
+        if(Dalyviai[i].Finisho_Numeris>=200) {
+            cout<<Dalyviai[i].Starto_Numeris<<" "<<Dalyviai[i].vardas<<" "<<Dalyviai[i].vieta<<" "<<Dalyviai[i].taskai_laikas_h<<" "<<Dalyviai[i].taskai_laikas_m<<" "<<Dalyviai[i].taskai_laikas_s<<endl;
+        }
+    }
+}
 
 int main()
 {
@@ -122,9 +168,13 @@ int main()
 
     Sportininkai Dalyviai[n];
 
-    Skaitimas_is_failo(n, Dalyviai);
+    Skaitimas_is_failo_Pirma_dalis(n, Dalyviai);
 
     Isdestimas(n, Dalyviai);
+
+    i_taskus(n, Dalyviai);
+cout<<endl;
+    Is_fila(n, Dalyviai);
 
     //cout<< Dalyviai[0].vardas;
 }
