@@ -4,6 +4,8 @@
 
 using namespace std;
 
+int n;
+
 struct Sportininkai
 {
 
@@ -33,7 +35,7 @@ struct Sportininkai
     int n, m;
 };
 
-int Skaitimas_is_failo_Pirma_dalis(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
+int Skaitimas_is_failo_Pirma_dalis(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[])
 {
     //int n, m;
 
@@ -83,7 +85,7 @@ O as nezinau kaip tai sutvarkyti
 */
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-int Isdestimas(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
+int Isdestimas(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[])
 {
     ofstream failas_o("U1out.txt");
 
@@ -115,7 +117,7 @@ int Isdestimas(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6]
     return 0;
 }
 
-int i_taskus(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
+int i_taskus(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[])
 {
 
     for(int i=0; i<Dalyviai[0].m; i++) {
@@ -138,7 +140,20 @@ int i_taskus(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
 
 }
 
-int Is_fila(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
+void SwapSumas(int a, int b) {
+   int t = a;
+   a = b;
+   b = t;
+}
+
+int Apkeitimas(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[])
+{
+    for(int i=0;i<Pirmas_Skaicius_Einantis_i_Dalyvius;i++) {
+
+    }
+}
+
+int Is_fila(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[])
 {
     ofstream failas_o("U1rez.txt");
     cout<<"Merginos"<<endl;
@@ -160,7 +175,7 @@ int Is_fila(int Pirmas_Skaicius_Einantis_i_Dalyvius, Sportininkai Dalyviai[6])
 
 int main()
 {
-    int n;
+    n = n;
 
     ifstream failas_i("U1.txt");
 
@@ -173,7 +188,7 @@ int main()
     Isdestimas(n, Dalyviai);
 
     i_taskus(n, Dalyviai);
-cout<<endl;
+    cout<<endl;
     Is_fila(n, Dalyviai);
 
     //cout<< Dalyviai[0].vardas;
