@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1649457576 source:c:\users\justinas\github\justino-informatikos-egzamino\sportasskaicuoklenauja\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+
