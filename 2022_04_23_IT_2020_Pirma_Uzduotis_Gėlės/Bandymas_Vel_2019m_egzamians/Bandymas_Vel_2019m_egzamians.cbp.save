@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="2022_04_23_IT_2020_Pirma_Uzduotis_Gėlės" />
+		<Option title="Bandymas_Vel_2019m_egzamians" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/2022_04_23_IT_2020_Pirma_Uzduotis_Gėlės" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Bandymas_Vel_2019m_egzamians" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/2022_04_23_IT_2020_Pirma_Uzduotis_Gėlės" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Bandymas_Vel_2019m_egzamians" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -33,7 +33,6 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="U1.txt" />
-		<Unit filename="U1rez.txt" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

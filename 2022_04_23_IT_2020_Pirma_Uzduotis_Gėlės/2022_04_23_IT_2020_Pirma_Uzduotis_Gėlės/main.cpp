@@ -52,9 +52,9 @@ int main()
         }
         else pabai = 0;
 
-        for(int i=prad+GelesRusys[i].Zydejimo_Pradzioj_H; i<pabai+GelesRusys[i].Zydejimo_Pabaiga_H; i++)
+        for(int j = prad + GelesRusys[i].Zydejimo_Pradzioj_H; j < pabai + GelesRusys[i].Zydejimo_Pabaiga_H; j++)
         {
-            Dienos[i]+=1;
+            Dienos[j]+=1;
 
         }
 
@@ -93,6 +93,9 @@ void print(int Dienos[])
 {
     int menuo;
     ofstream in_to_file("U1rez.txt");
+    //Dienos yra array,  didiusias(Dienos) yra Funcija kuri priema array
+    cout<<Dienos<<" "<<didiusias(Dienos)<<" "<<Dienos[didiusias(Dienos)]<<endl;
+cout << Dienos[5];
     in_to_file<<Dienos[didiusias(Dienos)]<<endl;
     menuo=didiusias(Dienos)/31+6;
     in_to_file<<menuo<<" ";
@@ -103,12 +106,12 @@ void print(int Dienos[])
 
     else if(menuo==7)
     {
-        in_to_file<<didiusias(Dienos)-30;
+        in_to_file<<didiusias(Dienos)-30<<" ";
     }
 
     else
     {
-        in_to_file<<didiusias(Dienos)-61;
+        in_to_file<<didiusias(Dienos)-61<<" ";
     }
 
 
@@ -122,11 +125,12 @@ void print(int Dienos[])
 
     else if(menuo==7)
     {
-        in_to_file<<pabaiga(Dienos)-30;
+        in_to_file<<pabaiga(Dienos)-30<<" ";
     }
 
     else
     {
-        in_to_file<<pabaiga(Dienos)-61;
+        in_to_file<<pabaiga(Dienos)-61<<" ";
     }
 }
+
