@@ -11,9 +11,11 @@ int main()
 {
     ifstream file_in ("U2.txt");
 
+    int Z_sk;- l
+
     Zvejyba[];
 
-    file_in >>  Z;
+    file_in >> Z;
 
     return 0;
 }

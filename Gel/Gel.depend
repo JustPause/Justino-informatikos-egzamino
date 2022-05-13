@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652447091 source:/home/justpause/Programming/C++/Gel/main.cpp
+	<iostream>
+	<fstream>
+

@@ -76,7 +76,11 @@ int main()
 //    {
 //        cout<<geles[i].dien_end<<" ";
 //    }
-    int H = 0;
+    int Zydi_skaicius = 0;
+    int prad_men = 6;
+    int prad_dien = 1;
+    int pab_menp = 8;
+    int pab_dien = 31;
     for(int i=0; i<93; i++)
     {
         for(int j=0; j<n; j++)
@@ -85,28 +89,41 @@ int main()
             {
 
                 zydinti_gele[i] = zydinti_gele[i] + 1;
-                if(zydinti_gele[i]>H)
-                    H=zydinti_gele[i];
+
+                if (geles[j].neap_men_start>prad_men) {
+
+                    prad_men = geles[j].neap_men_start;
+                    prad_dien = geles[j].neap_dien_start;
+                }
+                else if (geles[j].neap_men_start == prad_men && geles[j].neap_dien_start>prad_dien) {
+                    prad_dien = geles[j].neap_dien_start;
+                }
+
+
+
+                if(zydinti_gele[i]>Zydi_skaicius)
+                    Zydi_skaicius=zydinti_gele[i];
             }
             cout <<endl;
         }
-        cout << "zydi " << H;
-    }
 
+      //  cout << "zydi " << Zydi_skaicius;
+    }
+  cout << "pradzios data" << prad_men << " " << prad_dien << endl;
 
     cout<<endl;
 
 
-   /* int H=0;
+   /* int Zydi_skaicius=0;
     for(int i=0; i<93; i++)
     {
-        if(zydinti_gele[i]>H)
+        if(zydinti_gele[i]>Zydi_skaicius)
         {
 
-            H=zydinti_gele[i];
+            Zydi_skaicius=zydinti_gele[i];
         }
     }
-    cout<<H<<endl<<endl; */
+    cout<<Zydi_skaicius<<endl<<endl; */
 
    // cout<<geles[1].geliu_sk<<" "<<geles[1].men_start<<" "<<geles[1].dien_start<<" "<<geles[1].men_end<<" "<<geles[1].dien_end<<endl;
     int m1 = 0, m2 = 0;
@@ -131,8 +148,9 @@ int main()
     cout <<geles[m1].neap_men_start<<" "<<geles[m1].neap_dien_start<<endl;
  cout <<geles[m2].neap_men_end<<" "<<geles[m2].neap_dien_end<<endl;
 
-    o_file<<H<<endl;
+    o_file<<Zydi_skaicius<<endl;
 
         o_file <<geles[m1].neap_men_start<<" "<<geles[m1].neap_dien_start<<endl;
  o_file <<geles[m2].neap_men_end<<" "<<geles[m2].neap_dien_end<<endl;
+ return 0;
 }
