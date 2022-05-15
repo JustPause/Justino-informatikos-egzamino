@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652569472 source:c:\users\justinas\github\justino-informatikos-egzamino\2022_04_23_it_2020_pirma_uzduotis_gëlës\geles 1 uzduotis\main.cpp
+	<iostream>
+	<fstream>
+

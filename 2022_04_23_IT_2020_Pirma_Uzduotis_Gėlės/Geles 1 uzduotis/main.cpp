@@ -1,0 +1,122 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int n;
+
+struct Geles
+{
+    int sk = 0, StartMen = 0, StartDien = 0, EndMen = 0, EndDien = 0;
+    int d = 0;
+};
+
+
+int Nuskaitimas(Geles *geles, int n)
+{
+
+    ifstream in_file("U1.txt");
+
+    in_file>>n;
+
+    for(int i = 0; i < n; i++)
+    {
+        in_file >> geles[i].sk >> geles[i].StartMen >> geles[i].StartDien >> geles[i].EndMen >> geles[i].EndDien;
+    }
+
+    return 0;
+}
+
+int Convertuoti(Geles *geles)
+{
+    for(int i=0; i<n; i++)
+    {
+        if(geles[i].StartMen==8)
+        {
+            geles[i].d = geles[i].StartDien + 61;
+        }
+
+        else if(geles[i].StartMen==7)
+        {
+            geles[i].d = geles[i].StartDien + 30;
+        }
+
+        else if(geles[i].StartMen==6)
+        {
+            geles[i].d = geles[i].StartDien;
+        }
+
+
+
+
+        cout << geles[i].d<<" ";
+    }
+}
+
+int main()
+{
+    ifstream in_file("U1.txt");
+
+    in_file>>n;
+
+    Geles geles[n];
+
+    Nuskaitimas(geles, n);
+
+    Convertuoti(geles);
+
+    for(int i = 0; i < n; i++)
+    {
+       // cout << geles[i].StartDien << " " <<"+ = " << geles[i].d<<endl;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
