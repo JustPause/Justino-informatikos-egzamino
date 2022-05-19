@@ -22,10 +22,10 @@ int main()
     file_in.get(Zvejys[0].VardasPavarde, 20);
 
     cout<<Zvejys[0].VardasPavarde[5];
+
     for(int i=0; i<20; i++)
     {
         cout<<Zvejys[0].VardasPavarde[i];
-        cerr<<0;
     }
     return 0;
 }
