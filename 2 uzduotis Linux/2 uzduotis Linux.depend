@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1652990205 source:/home/justpause/GitHub/Justino-informatikos-egzamino/2 uzduotis Linux/main.cpp
+	<iostream>
+	<fstream>
+

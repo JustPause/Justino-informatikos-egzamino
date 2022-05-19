@@ -3,19 +3,29 @@
 
 using namespace std;
 
-struct Zvejyba {
-int Z_sk;
+struct Zvejyba
+{
+    int Z_sk;
+    char VardasPavarde[20]= {" "};
 };
 
 int main()
 {
     ifstream file_in ("U2.txt");
 
-    int Z_sk;- l
+    int Z_sk;
 
-    Zvejyba[];
+    file_in >> Z_sk;
 
-    file_in >> Z;
+    Zvejyba Zvejys[Z_sk];
 
+    file_in.get(Zvejys[0].VardasPavarde, 20);
+
+    cout<<Zvejys[0].VardasPavarde[5];
+    for(int i=0; i<20; i++)
+    {
+        cout<<Zvejys[0].VardasPavarde[i];
+        cerr<<0;
+    }
     return 0;
 }
