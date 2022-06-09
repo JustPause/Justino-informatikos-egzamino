@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1654711957 source:c:\users\justinas\github\justino-informatikos-egzamino\2022_04_23_it_2020_pirma_uzduotis_gëlës\2022 speed\main.cpp
+	<iostream>
+	<fstream>
+
